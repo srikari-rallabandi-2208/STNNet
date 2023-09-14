@@ -1,4 +1,4 @@
-# STNNet![image](https://github.com/srikari-rallabandi-2208/STNNet/assets/55296296/09dc7704-cc34-4a37-b993-9a1dfb6d381e)
+# ![image](https://github.com/srikari-rallabandi-2208/STNNet/assets/55296296/09dc7704-cc34-4a37-b993-9a1dfb6d381e)
 
 Paper  [Detection, Tracking, and Counting Meets Drones in Crowds: A Benchmark](https://openaccess.thecvf.com/content/CVPR2021/papers/Wen_Detection_Tracking_and_Counting_Meets_Drones_in_Crowds_A_Benchmark_CVPR_2021_paper.pdf).
 
