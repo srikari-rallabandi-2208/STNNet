@@ -1,13 +1,11 @@
-# ![image](https://github.com/srikari-rallabandi-2208/STNNet/assets/55296296/09dc7704-cc34-4a37-b993-9a1dfb6d381e)
 
-Paper  [Detection, Tracking, and Counting Meets Drones in Crowds: A Benchmark](https://openaccess.thecvf.com/content/CVPR2021/papers/Wen_Detection_Tracking_and_Counting_Meets_Drones_in_Crowds_A_Benchmark_CVPR_2021_paper.pdf).
-
+# Improved STTNet
 ## Introduction
-![VisDrone](https://github.com/VisDrone/DroneCrowd/blob/master/sample.png)
 
-This paper proposes a space-time multi-scale attention network (STANet) to solve density map estimation, localization and tracking in dense crowds of video clips captured by drones with arbitrary crowd density, perspective, and flight altitude. Our STANet method aggregates multi-scale feature maps in sequential frames to exploit the temporal coherency, and then predict the density maps, localize the targets, and associate them in crowds simultaneously. A coarse-to-fine process is designed to gradually apply the attention module on the aggregated multi-scale feature maps to enforce the network to exploit the discriminative space-time features for better performance. The whole network is trained in an end-to-end manner with the multi-task loss, formed by three terms, i.e., the density map loss, localization loss and association loss. The non-maximal suppression followed by the min-cost flow framework is used to generate the trajectories of targets' in scenarios. Since existing crowd counting datasets merely focus on crowd counting in static cameras rather than density map estimation, counting and tracking in crowds on drones, we have collected a new large-scale drone-based dataset, DroneCrowd, formed by 112 video clips with 33,600 high resolution frames (i.e., 1920x1080) captured in 70 different scenarios. With intensive amount of effort, our dataset provides 20,800 people trajectories with 4.8 million head annotations and several video-level attributes in sequences. Extensive experiments are conducted on two challenging public datasets, i.e., Shanghaitech and UCF-QNRF, and our DroneCrowd, to demonstrate that STANet achieves favorable performance against the state-of-the-arts. 
+In the realm of computer vision, multi-object tracking in crowded scenes stands as a pivotal challenge with diverse applications, from surveillance systems to autonomous vehicles. Existing tracking methods such as video surveillance for crowd control [26] and public safety [11] often face difficulties in precisely associating noisy object detections and maintaining consistent labels across frames. To address these challenges, this paper presents ’Improved STNNet’, an advanced framework for online Multi-Object Tracking (MOT). Building upon the foundational STNNet architecture, our improved model refines the decision-making process by incorporating deep reinforcement learning techniques. By formulating the online MOT problem as a Markov Decision Process (MDP), Improved STNNet learns a sophisticated policy for data association. Notably, the framework adeptly handles complexities such as object birth/death and appearance/disappearance, treating them as state transitions within the MDP. Through rigorous experimentation on benchmark datasets, including the MOT Challenge, our proposed Improved STNNet demonstrates superior performance, outperforming existing methods in challenging, crowded scenarios. The study not only provides compelling evidence of the efficacy of our approach but also opens avenues for advancing real-time video analysis applications, especially in dynamic, crowded environments.Some recent efforts [2, 4, 16, 22, 23, 25] have devoted to construct datasets for crowd counting. For density map estimation, we used the dataset constructed and provided by STNNET [18] upong which this paper is extensively based upon.
 
 ## Dataset
+We have extensively used the Datasets used in STNNet, as well as using the datasets from other sources like ShanghaiTech Crowd Counting Dataset. It consists of 1198 annotated crowd images. The dataset is divided into two parts, Part-A containing 482 images and Part-B containing 716 images. Part-A is split into train and test subsets consisting of 300 and 182 images, respectively. Part-B is split into train and test subsets consisting of 400 and 316 images. Each person in a crowd image is annotated with one point close to the center of the head. In total, the dataset consists of 330,165 annotated people. Images from Part-A were collected from the Internet, while images from Part-B were collected on the busy streets of Shanghai.
 
 ### ECCV2020 Challenge
 
@@ -22,34 +20,6 @@ DroneCrowd [BaiduYun](https://pan.baidu.com/s/1hjXoVZJ16y9Tf7UXcJw3oQ)(code:ml1u
 
 ## Code
 
-[Space-Time Neighbor-Aware Network (STNNet-pytorch)](https://github.com/VisDrone/DroneCrowd/tree/master/STNNet)
+[Space-Time Neighbor-Aware Network (STNNet-pytorch)](https://github.com/srikari-rallabandi-2208/STNNet/tree/master/STNNet)
 
-[Space-Time Multi-Scale Attention Network (STANet-pytorch)](https://github.com/VisDrone/DroneCrowd/tree/master/STANet)
-
-
-## Citation
-
-Please cite this paper if you want to use it in your work.
-```
-@inproceedings{dronecrowd_cvpr2021,
-  author    = {Longyin Wen and
-               Dawei Du and
-               Pengfei Zhu and
-               Qinghua Hu and
-               Qilong Wang and
-               Liefeng Bo and
-               Siwei Lyu},
-  title     = {Detection, Tracking, and Counting Meets Drones in Crowds: A Benchmark},
-  booktitle = {CVPR},
-  year      = {2021}
-}
-```
-```
-@article{zhu2021graph,
-  title={Graph Regularized Flow Attention Network for Video Animal Counting from Drones},
-  author={Zhu, Pengfei and Peng, Tao and Du, Dawei and Yu, Hongtao and Zhang, Libo and Hu, Qinghua},
-  journal={IEEE Transactions on Image Processing},
-  year={2021},
-  publisher={IEEE}
-}
-```
+[Space-Time Multi-Scale Attention Network (STANet-pytorch)](https://github.com/srikari-rallabandi-2208/STNNet/tree/master/STANet)
